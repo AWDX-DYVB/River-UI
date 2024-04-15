@@ -3,7 +3,7 @@
 
 ## 启动裤
 ````lua
-local NoHyper = loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll"))()
+local NoHyper = loadstring(game:HttpGet("https://raw.githubusercontent.com/AWDX-DYVB/River-UI/main/River%20UI%E6%BA%90%E7%A0%81.lua"))()
 ````
 
 # 创建一个窗口
