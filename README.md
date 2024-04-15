@@ -22,7 +22,7 @@ Window:AddDiscord("https://discord.gg/your-discord")
 ## 创建选择卡槽
 ````lua
 local PlayerLobby = Window:NewTab("选择卡槽","earth") 
-```
+````
 
 ## 创建功能卡槽
 ````lua
