@@ -1,4 +1,4 @@
-# bgyLenfkrb 二改版
+# 欢迎你来使用这个UI
 ![REAL (2)](https://github.com/3345-c-a-t-s-u-s/NoHyperLib/assets/117000269/c2cc249c-ed95-4d99-84ad-f432ed6698da)
 
 ## 启动裤
@@ -79,4 +79,20 @@ end)
 
 
 --[[由于输入框还有点小问题-正在修复]]
+````
+
+## 关于我们
+````
+--[[这个UI并不是我原创的]]
+--[[我只是1个2改优化的]]
+--[[原创作者:https://github.com/3345-c-a-t-s-u-s/NoHyperLib]]
+````
+
+## https://github.com/3345-c-a-t-s-u-s/NoHyperLib
+````
+````
+
+## 进入河流官网了解更多
+````
+https://awdx-dyvb.github.io
 ````
