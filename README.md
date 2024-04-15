@@ -5,7 +5,7 @@
 ```lua
 local NoHyper = loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll"))()
 
-# 介绍说明
+## 介绍说明
 这个是启动UI的主题链接
 
 
