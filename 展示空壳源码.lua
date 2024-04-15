@@ -65,3 +65,5 @@ end)
 bsuvnbw:AddToggle("开关",false,function(Value)
 
 end)
+
+local Playey = Window:NewTab("关于","earth") 
