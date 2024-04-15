@@ -30,4 +30,8 @@ local SpeedJumpGravity = PlayerLobby:NewSection("功能卡槽","positon","left")
 --[[positon-这是1个图片的名字]]
 --[[positon-如果你想更换这个图片-可以输入以下这几个单词-找到你想要的图片]]
 --[[图片单词:"settings"="smartphone"="crown"="save"="hash"]]
+
+--[[该怎么移动功能卡槽]]
+--[[left]]功能卡槽在左边
+--[[right]]功能卡槽在右边
 ````
