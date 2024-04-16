@@ -183,51 +183,55 @@ local function SetImage(name:string,image:ImageLabel)
 	image.ImageRectSize = Vector2.new(0,0)
 
 	if name == "settings" then
-		image.Image = "rbxassetid://7734053495"
+		image.Image = "rbxassetid://7734053495" --齿轮图标
 	end
 
 	if name == "smartphone" then
-		image.Image = "rbxassetid://7734058979"
+		image.Image = "rbxassetid://7734058979" --手机图标
 	end
 
 	if name == "crown" then
-		image.Image = "rbxassetid://7733765398"
+		image.Image = "rbxassetid://7733765398" --王冠图标
 	end
 
 	if name == "save" then
-		image.Image = "rbxassetid://7734052335"
+		image.Image = "rbxassetid://7734052335" --内存图标
 	end
 
 	if name == "hash" then
-		image.Image = "rbxassetid://7733955740"
+		image.Image = "rbxassetid://7733955740" --手势禁止图标
 	end
 
 	if name == "server" then
-		image.Image = "rbxassetid://7734053426"
+		image.Image = "rbxassetid://7734053426" --服务器图标
 	end
 
 	if name == "option" then
-		image.Image = "rbxassetid://7734021300"
+		image.Image = "rbxassetid://7734021300" --未知图标
 	end
 
 	if name == "link" then
-		image.Image = "rbxassetid://7733978098"
+		image.Image = "rbxassetid://7733978098" --环形针图标
 	end
 
 	if name == "copy" then
-		image.Image = "rbxassetid://7733764083"
+		image.Image = "rbxassetid://7733764083" --叠在一起的方块图标
 	end
 
 	if name == "cpu" then
-		image.Image = "rbxassetid://7733765045"
+		image.Image = "rbxassetid://7733765045" --芯片图标
 	end
 
 	if name == "moon" then
-		image.Image = "rbxassetid://7743870134"
+		image.Image = "rbxassetid://7743870134" --月亮图标
 	end
 
 	if name == "wallet" then
-		image.Image = "rbxassetid://7743877573"
+		image.Image = "rbxassetid://7743877573" --钱包图标
+	end
+	
+	if name == "dxq" then
+		image.Image = "rbxassetid://17173627870" --钱包图标
 	end
 end
 
@@ -544,7 +548,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	CloseButton.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
 	CloseButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
 	CloseButton.ZIndex = 8
-	CloseButton.Image = "rbxassetid://10002398990"
+	CloseButton.Image = "rbxassetid://17174006464"
 
 	TickUI.BackgroundTransparency = 1
 	TickUI.Name = "TickUI"
@@ -1552,7 +1556,6 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				local UIListLayout = Instance.new("UIListLayout")
 				local DOPWN = 'rbxassetid://7733717447'
 				local UP = 'rbxassetid://7072706796'
-				local dd = {}
 
 				--Properties:
 
@@ -1764,10 +1767,17 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 					return Button,Frame
 				end
-				
-				local function addb(v)
+
+				local function Render()
+					for i,v in ipairs(Drop:GetChildren()) do
+						if v:IsA('TextButton') then
+							v:Destroy()
+						end
+					end
+
+					local lastui
+					for i,v in pairs(DropdownInfo) do
 						local ubtton,Toggle = getbutton()
-						dd[v]=ubtton
 						if v == DropdownDefault then
 							Tween:Create(Toggle,TweenInfo.new(0.1),{BackgroundTransparency = 0,Size = UDim2.new(0.100000001, 0, 0.800000012, 0)}):Play()
 							lastui = Toggle
@@ -1798,27 +1808,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 						ubtton.MouseLeave:Connect(function()
 							Tween:Create(ubtton,TweenInfo.new(0.1),{TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 						end)
-				end
-
-				local function Render()
-					for i,v in ipairs(Drop:GetChildren()) do
-						if v:IsA('TextButton') then
-							v:Destroy()
-						end
 					end
-
-					local lastui
-					for i,v in pairs(DropdownInfo) do
-						addb(v)
-					end
-				end
-				
-				local function dd:del(v)
-						dd[v]:Destroy()
-				end
-				
-				local function dd:put(v)
-				    addb(v)
 				end
 
 				local valnow = false
