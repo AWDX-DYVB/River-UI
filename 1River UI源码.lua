@@ -544,7 +544,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	CloseButton.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
 	CloseButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
 	CloseButton.ZIndex = 8
-	CloseButton.Image = "rbxassetid://15361603644"
+	CloseButton.Image = "rbxassetid://17173627870"
 
 	TickUI.BackgroundTransparency = 1
 	TickUI.Name = "TickUI"
