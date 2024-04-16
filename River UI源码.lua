@@ -1552,6 +1552,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				local UIListLayout = Instance.new("UIListLayout")
 				local DOPWN = 'rbxassetid://7733717447'
 				local UP = 'rbxassetid://7072706796'
+				local dd = {}
 
 				--Properties:
 
@@ -1763,17 +1764,10 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 					return Button,Frame
 				end
-
-				local function Render()
-					for i,v in ipairs(Drop:GetChildren()) do
-						if v:IsA('TextButton') then
-							v:Destroy()
-						end
-					end
-
-					local lastui
-					for i,v in pairs(DropdownInfo) do
+				
+				local function addb(v)
 						local ubtton,Toggle = getbutton()
+						dd[v]=ubtton
 						if v == DropdownDefault then
 							Tween:Create(Toggle,TweenInfo.new(0.1),{BackgroundTransparency = 0,Size = UDim2.new(0.100000001, 0, 0.800000012, 0)}):Play()
 							lastui = Toggle
@@ -1804,7 +1798,27 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 						ubtton.MouseLeave:Connect(function()
 							Tween:Create(ubtton,TweenInfo.new(0.1),{TextColor3 = Color3.fromRGB(255, 255, 255)}):Play()
 						end)
+				end
+
+				local function Render()
+					for i,v in ipairs(Drop:GetChildren()) do
+						if v:IsA('TextButton') then
+							v:Destroy()
+						end
 					end
+
+					local lastui
+					for i,v in pairs(DropdownInfo) do
+						addb(v)
+					end
+				end
+				
+				local function dd:del(v)
+						dd[v]:Destroy()
+				end
+				
+				local function dd:put(v)
+				    addb(v)
 				end
 
 				local valnow = false
