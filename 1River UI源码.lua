@@ -183,51 +183,51 @@ local function SetImage(name:string,image:ImageLabel)
 	image.ImageRectSize = Vector2.new(0,0)
 
 	if name == "settings" then
-		image.Image = "rbxassetid://7734053495"
+		image.Image = "rbxassetid://7734053495" --齿轮图标
 	end
 
 	if name == "smartphone" then
-		image.Image = "rbxassetid://7734058979"
+		image.Image = "rbxassetid://7734058979" --手机图标
 	end
 
 	if name == "crown" then
-		image.Image = "rbxassetid://7733765398"
+		image.Image = "rbxassetid://7733765398" --王冠图标
 	end
 
 	if name == "save" then
-		image.Image = "rbxassetid://7734052335"
+		image.Image = "rbxassetid://7734052335" --内存图标
 	end
 
 	if name == "hash" then
-		image.Image = "rbxassetid://7733955740"
+		image.Image = "rbxassetid://7733955740" --手势禁止图标
 	end
 
 	if name == "server" then
-		image.Image = "rbxassetid://7734053426"
+		image.Image = "rbxassetid://7734053426" --服务器图标
 	end
 
 	if name == "option" then
-		image.Image = "rbxassetid://7734021300"
+		image.Image = "rbxassetid://7734021300" --未知图标
 	end
 
 	if name == "link" then
-		image.Image = "rbxassetid://7733978098"
+		image.Image = "rbxassetid://7733978098" --环形针图标
 	end
 
 	if name == "copy" then
-		image.Image = "rbxassetid://7733764083"
+		image.Image = "rbxassetid://7733764083" --叠在一起的方块图标
 	end
 
 	if name == "cpu" then
-		image.Image = "rbxassetid://7733765045"
+		image.Image = "rbxassetid://7733765045" --芯片图标
 	end
 
 	if name == "moon" then
-		image.Image = "rbxassetid://7743870134"
+		image.Image = "rbxassetid://7743870134" --月亮图标
 	end
 
 	if name == "wallet" then
-		image.Image = "rbxassetid://7743877573"
+		image.Image = "rbxassetid://7743877573" --钱包图标
 	end
 end
 
@@ -544,7 +544,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	CloseButton.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
 	CloseButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
 	CloseButton.ZIndex = 8
-	CloseButton.Image = "rbxassetid://10002398990"
+	CloseButton.Image = "rbxassetid://15361603644"
 
 	TickUI.BackgroundTransparency = 1
 	TickUI.Name = "TickUI"
